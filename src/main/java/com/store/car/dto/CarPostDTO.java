@@ -2,22 +2,26 @@ package com.store.car.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import lombok.Builder;
+
+@Builder
 @JsonInclude
 public class CarPostDTO {
 
 	private String model;
 	private String brand;
-	private String price;
+	private Double price;
 	private String description;
 	private String engineVersion;
 	private String city;
 	private String createdDate;
 	private Long ownerId ;
+	private String ownerName;
 	private String ownerType;
 	private String contact;
 	
-	public CarPostDTO(String model, String brand, String price, String description, String engineVersion, String city,
-			String createdDate, Long ownerId, String ownerType, String contact) {
+	public CarPostDTO(String model, String brand, Double price, String description, String engineVersion, String city,
+			String createdDate, Long ownerId,String ownerName, String ownerType, String contact) {
 		super();
 		this.model = model;
 		this.brand = brand;
@@ -27,6 +31,7 @@ public class CarPostDTO {
 		this.city = city;
 		this.createdDate = createdDate;
 		this.ownerId = ownerId;
+		this.ownerName = ownerName;
 		this.ownerType = ownerType;
 		this.contact = contact;
 	}
@@ -46,10 +51,10 @@ public class CarPostDTO {
 	public void setBrand(String brand) {
 		this.brand = brand;
 	}
-	public String getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(String price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	public String getDescription() {
@@ -94,6 +99,16 @@ public class CarPostDTO {
 	public void setContact(String contact) {
 		this.contact = contact;
 	}
+
+	public String getOwnerName() {
+		return ownerName;
+	}
+
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
+	}
+	
+	
 	
 	
 	

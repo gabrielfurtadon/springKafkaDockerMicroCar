@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="car_post")
-public class carPostEntity {
+public class CarPostEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -46,11 +46,11 @@ public class carPostEntity {
 	private OwnerPostEntity ownerPost;
 
 	
-	public carPostEntity() {
+	public CarPostEntity() {
 		super();
 	}
 
-	public carPostEntity(Long id, String model, String brand, Double price, String description, String engineVersion,
+	public CarPostEntity(Long id, String model, String brand, Double price, String description, String engineVersion,
 			String city, String createdDate, String contact, OwnerPostEntity ownerPost) {
 		super();
 		this.id = id;
